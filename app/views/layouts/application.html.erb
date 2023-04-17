@@ -14,6 +14,10 @@
    <header>
     <% if user_signed_in? %>
       <li>
+        <%= link_to '投稿フォーム', new_post_image_path %>
+        <!--投稿フォームのボタン作成。newのpath指定で投稿フォームボタンを押すことでnewページへ遷移できる-->
+      </li>
+      <li>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
       </li>
     <% else %>
